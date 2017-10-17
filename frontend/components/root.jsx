@@ -1,4 +1,5 @@
 import React from 'react';
+// import Map from './map'
 
 const Root = () => (
   <div>
@@ -7,3 +8,5 @@ const Root = () => (
 );
 
 export default Root;
+
+// <Map />
