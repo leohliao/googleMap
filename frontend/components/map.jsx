@@ -1,27 +1,32 @@
 import React from 'react';
 
+
 class Map extends React.Component {
   constructor(props){
       super(props);
+
   } // end constructor
 
   componentDidMount(){
     // Define all the variables here
+    const input = document.getElementById('pac-input');
     const mapDisplay = document.getElementById('map')
-    const searchBox = new google.maps.places.SearchBox(input);
-    const infoWindow = new google.maps.InfoWindow();
-    const service = new google.maps.places.PlacesService(map);
+    // const searchBox = new google.maps.places.SearchBox(input);
+    // const infoWindow = new google.maps.InfoWindow();
 
     const map = new google.maps.Map(mapDisplay, {
       center: {lat: 37.775, lng: -122.435},
       zoom: 13
     }) // const map
+    const searchBox = new google.maps.places.SearchBox(input);
+
 
   } // end componentDidMount
 
   render() {
     return (
       <div>
+        <input id="pac-input" className="controls" type="text" placeholder="Search Box"/>
         <div id="map"></div>
       </div>
     ); // return
